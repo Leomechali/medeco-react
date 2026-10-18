@@ -4,7 +4,7 @@ function App() {
 
 
   return (
-    <div>Hola Mundo</div>
+    <div>E-commerce Me-Deco&Aromas</div>
   )
 }
 
