@@ -1,9 +1,10 @@
 import logo from "../../assets/logo_me.jpg";
-import Cartwidget from "../Cartwidget/Cartwidget";
+import Cartwidget from "../CartWidget/CartWidget";
+import './Navbar.css'
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="nav">
       <img src={logo} alt="logo" width={70} />
       
       <ul className="categorias">

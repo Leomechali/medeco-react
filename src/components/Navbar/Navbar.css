@@ -1,0 +1,19 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fff8e1;
+}
+
+.categorias{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.cart-widget{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
