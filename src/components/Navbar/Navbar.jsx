@@ -6,10 +6,12 @@ const Navbar = () => {
     <nav>
       <img src={logo} alt="logo" width={70} />
       
-      <ul>
-        <li>Productos</li>
-        <li>Nosotros</li>
-        <li>Contacto</li>
+      <ul className="categorias">
+        <li>Sahumerios</li>
+        <li>Velas</li>
+        <li>Esencias</li>
+        <li>Fuentes</li>
+        <li>Deco</li>
       </ul>
 
       <Cartwidget />
