@@ -24,7 +24,7 @@ El proyecto cumple con la modularización pedida en `src/components/`:
 ### 2. CartWidget
 `src/components/CartWidget/CartWidget.jsx`
 - Componente hijo de Navbar
-- Muestra ícono de carrito `IoCartOutline` y número hardcodeado (3) como notificación
+- Muestra ícono de carrito `IoCartOutline` y número hardcodeado (1) como notificación
 - Clase `.cart-widget` para alinear ícono y número
 
 ### 3. ItemListContainer
