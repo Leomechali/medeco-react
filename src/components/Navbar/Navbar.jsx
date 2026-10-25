@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo_me.jpg";
 import Cartwidget from "../Cartwidget/Cartwidget";
 
 const Navbar = () => {
