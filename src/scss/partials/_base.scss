@@ -1,0 +1,30 @@
+// =========================================
+// _base.scss — Reset y estilos globales
+// =========================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-principal;
+    color: $color-cafe-medio;
+    padding-top: 5rem;
+    background-color: #faf7f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}

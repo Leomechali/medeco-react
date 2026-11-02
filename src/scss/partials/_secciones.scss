@@ -1,0 +1,303 @@
+// =========================================
+// _secciones.scss — Productos, Nosotros, Contacto
+// =========================================
+
+// ---- Títulos de sección compartidos ----
+%titulo-seccion {
+    @include titulo-seccion;
+}
+
+.section-title {
+    @extend %titulo-seccion;
+    color: $color-medio;
+}
+
+// ---- PRODUCTOS ----
+.productos {
+    @include padding-seccion;
+
+    h2 {
+        @extend %titulo-seccion;
+    }
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tarjeta {
+    @include tarjeta-base;
+    width: 100%;
+    max-width: 100%;
+
+    img {
+        width: 100%;
+        border-radius: $radio-sm;
+        margin-bottom: 12px;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.03);
+    }
+
+    h3 {
+        color: $color-dorado-claro;
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 14px;
+        color: $color-cafe-dark;
+        line-height: 1.6;
+    }
+
+    .precio {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-dorado;
+        margin-top: 8px;
+    }
+}
+
+// ---- NOSOTROS ----
+.nosotros {
+    background: $color-oscuro;
+    @include padding-seccion;
+    text-align: center;
+    border-top: 1px solid $color-borde-purp;
+    border-bottom: 1px solid $color-borde-purp;
+
+    h2 {
+        color: $color-cafe-medio;
+        font-size: 13px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 40px;
+    }
+
+    p {
+        max-width: 640px;
+        margin: 0 auto 20px;
+        line-height: 1.9;
+        color: $color-cafe-medio;
+        font-size: 15px;
+    }
+
+    @include mobile {
+        @include padding-seccion(40px, 16px);
+    }
+}
+
+// ---- CONTACTO ----
+.contacto {
+    @include padding-seccion;
+    text-align: center;
+
+    h2 {
+        @extend %titulo-seccion;
+    }
+
+    p {
+        font-size: 14px;
+        color: $color-cafe-claro;
+        line-height: 2.5;
+    }
+
+    .contacto-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .contacto-item {
+        background-color: #fdf9f4;
+        border: 1px solid rgba($color-borde-cafe, 0.4);
+        border-radius: $radio-md;
+        padding: 24px;
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: $sombra-hover;
+        }
+
+        span {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: $color-dorado;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color-cafe-dark;
+            line-height: 1.5;
+        }
+    }
+
+    @include mobile {
+        @include padding-seccion(40px, 16px);
+    }
+}
+
+// ---- Formulario de contacto ----
+.form-contacto {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+
+    label {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-cafe-nav;
+        margin-bottom: 6px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid rgba($color-borde-cafe, 0.5);
+        border-radius: $radio-sm;
+        background: #fdf9f4;
+        font-family: $font-principal;
+        font-size: 14px;
+        color: $color-medio;
+        margin-bottom: 20px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        outline: none;
+
+        &:focus {
+            border-color: $color-dorado;
+            box-shadow: 0 0 0 3px rgba($color-dorado, 0.15);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .btn-enviar {
+        @include boton-primario;
+        width: 100%;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        font-family: $font-principal;
+    }
+}
+
+// ---- FOOTER ----
+footer {
+    background: $color-oscuro;
+    text-align: center;
+    padding: 24px 20px;
+    border-top: 1px solid $color-borde-purp;
+
+    p {
+        font-size: 12px;
+        color: $color-footer-text;
+        letter-spacing: 1px;
+    }
+}
+
+// ---- Cabecera de páginas internas ----
+.page-hero {
+    background-color: $color-oscuro;
+    border-bottom: 1px solid $color-borde-purp;
+    text-align: center;
+    @include padding-seccion(50px, 20px);
+    position: relative;
+
+    h1 {
+        font-size: 2.5rem;
+        color: $color-blanco;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+
+        @include mobile {
+            font-size: 1.8rem;
+        }
+    }
+
+    p {
+        color: $color-cafe-medio;
+        font-size: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .estrella-deco {
+        font-size: 2rem;
+        margin-bottom: 16px;
+        display: block;
+        animation: pulse 2s infinite;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+// ---- Bandas de ofertas ----
+.oferta-badge {
+    display: inline-block;
+    background-color: $color-dorado;
+    color: $color-cafe-text;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: $radio-pill;
+    margin-bottom: 10px;
+    animation: badgePop 0.4s ease;
+}
+
+@keyframes badgePop {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+// ---- Animación de aparición scroll ----
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

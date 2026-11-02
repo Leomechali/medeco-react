@@ -1,0 +1,135 @@
+// =========================================
+// _nav.scss — Navegación y Header
+// =========================================
+
+%nav-link-base {
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    background-color: $color-nav-bg;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1px 40px;
+    @include flex-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    border-bottom: 1px solid rgba($color-borde-cafe, 0.3);
+
+    .logo {
+        img {
+            height: 60px;
+            width: auto;
+            border-radius: $radio-lg;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 32px;
+
+        a {
+            @extend %nav-link-base;
+            color: $color-cafe-nav;
+
+            &:hover {
+                color: $color-medio;
+            }
+
+            &.activo {
+                color: $color-dorado;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// Menú hamburguesa (mobile)
+.menu-container {
+    display: none;
+}
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: $color-cafe-nav;
+}
+
+// WhatsApp flotante
+.wpplogofixed {
+    background-color: $color-blanco;
+    width: 5rem;
+    height: 5rem;
+    border-radius: $radio-circulo;
+    @include flex-center;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+    z-index: 9999;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .wpplogo {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+// Responsive nav
+@include tablet {
+    nav {
+        padding: 14px 20px;
+    }
+}
+
+@include mobile {
+    .menu-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        padding: 1rem 20px;
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 0;
+            border-top: 1px solid rgba($color-borde-cafe, 0.3);
+            margin-top: 0.5rem;
+        }
+    }
+
+    .menu-toggle-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+}

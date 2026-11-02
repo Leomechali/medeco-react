@@ -1,0 +1,56 @@
+// =========================================
+// _variables.scss — Mundo Esotérico
+// =========================================
+
+// Paleta de colores principal
+$color-oscuro:       #0d0520;
+$color-medio:        #1e0f0a;
+$color-borde-purp:   #4a2060;
+$color-borde-cafe:   #d6b498;
+
+// Dorados y cálidos
+$color-dorado:       #d4a843;
+$color-dorado-claro: #d4af7a;
+$color-dorado-hover: #d1c19d;
+$color-crema:        #e8d5b7;
+$color-cafe-medio:   #b09878;
+$color-cafe-claro:   #a89070;
+$color-cafe-nav:     #937c6c;
+$color-cafe-dark:    #9a8060;
+$color-cafe-text:    #3a2000;
+
+// Neutros
+$color-blanco:       #ffffff;
+$color-footer-text:  #5a4040;
+$color-nav-bg:       #f8f5f2b3;
+
+// Overlays
+$overlay-hero:       #00000080;
+$overlay-hero-card:  #1e0f0a8c;
+$overlay-tarjeta:    #9b9b9b6b;
+$overlay-logo-circ:  #d2b48c4d;
+
+// Tipografía
+$font-principal:     "Bree Serif", serif;
+
+// Espaciado base
+$espaciado-xs:       0.5rem;
+$espaciado-sm:       1rem;
+$espaciado-md:       1.5rem;
+$espaciado-lg:       2.5rem;
+$espaciado-xl:       3.75rem;
+
+// Bordes
+$radio-sm:           0.5rem;
+$radio-md:           1rem;
+$radio-lg:           2rem;
+$radio-pill:         40px;
+$radio-circulo:      50%;
+
+// Breakpoints
+$bp-tablet:          768px;
+$bp-mobile:          481px;
+
+// Sombras
+$sombra-tarjeta:     0 4px 20px rgba(0,0,0,0.15);
+$sombra-hover:       0 8px 32px rgba(212,168,67,0.18);
