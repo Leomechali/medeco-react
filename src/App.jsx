@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import { Hero } from "./components/Hero/Hero"
+import Hero from "./components/Hero/Hero";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <section id="inicio" className="hero" aria-label="Portada">
       <div className="hero-tarjeta">
