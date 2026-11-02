@@ -4,14 +4,16 @@ import './Item.css'
 
 const Item = ({ product }) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={product.img} />
+    <Card style={{ width: '18rem', height: '100%' }}>
+      <Card.Img 
+        variant="top" 
+        src={product.img} 
+        style={{ height: '250px', objectFit: 'cover' }} 
+      />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
-        <Card.Text>
-          {product.description}
-        </Card.Text>
-        <Button variant="primary">Ver más</Button>
+        <Card.Text>{product.description}</Card.Text>
+        <Button variant="dark">Ver más</Button>
       </Card.Body>
     </Card>
   )
