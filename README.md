@@ -39,3 +39,8 @@ El proyecto cumple con la modularización pedida en `src/components/`:
   <Navbar />
   <ItemListContainer greeting="Bienvenidos a mi e-commerce" />
 </>
+```
+
+# Simulación de carga de datos - Pre-entrega 3
+
+Para simular una API real se creó src/mock/asyncMock.js con una función `getProducts()` que retorna una `Promise`. Dentro de la promesa se usa `setTimeout` de 2000ms para simular latencia de red. `ItemListContainer` usa `useState` para items y `useEffect` con dependencia vacía para llamar a la función solo al montar, guardando el resultado con `setItems` respetando inmutabilidad.
